@@ -31,6 +31,7 @@ open class AKExpander: AKNode, AKToggleable, AUEffect, AKInput {
     /// Expansion Threshold (rate) ranges (Default: -100)
     @objc open dynamic var expansionThreshold: Double = -100 {
         didSet {
+            au[kDynamicsProcessorParam_ExpansionThreshold] = expansionThreshold
         }
     }
 
